@@ -3,7 +3,7 @@ services:
     - docker
 
 berfore_install:
-    - docker build -f Dockerfile.prod -t sravanreddyguduru7/docker .
+    - docker build -f Dockerfile.dev -t sravanreddyguduru7/docker .
 
 script:
     - docker run sravanreddyguduru7/docker npm run test --code-coverage --watch=false
