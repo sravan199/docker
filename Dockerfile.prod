@@ -1,0 +1,9 @@
+FROM node:10-alpine as builder 
+WORKDIR /usr/angular
+COPY package.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM nginx:1.16.0-alpine as prod-stage
+COPY --from=builder  /usr/angular/dist/frontendapp /usr/share/nginx/html
