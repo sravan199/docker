@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+
+berfore_install:
+    - docker build -t sravanreddyguduru7/docker .
+
+script:
+    - docker run sravanreddyguduru7 npm run test --code-coverage --watch=false
