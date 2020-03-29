@@ -1,0 +1,20 @@
+version: '3'
+services: 
+    client-app-dev:
+        build: 
+            dockerfile: Dockerfile.dev
+            context: ./
+        ports: 
+        - "4200:4200"
+        - "49153:49153"
+        volumes: 
+            - /usr/app/node_modules
+            - .:/usr/app
+    #     links:
+    #         - trion
+    # trion:
+    #     image: trion/ng-cli-karma
+    #     volumes:
+    #         - ./:/app
+
+    # command: ["ng", "test" , "--watch=false" ,"--single-run=true"]
