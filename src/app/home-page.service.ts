@@ -9,7 +9,10 @@ export class HomePageService {
 
   getHealth() {
     // return this.httpClient.get('http://localhost:3000/health');
-    return this.httpClient.get('api/health');
+    return this.httpClient.get('server-cluster-ip:3000/health');
+  }
+  getHealthapi() {
+    return this.httpClient.get('server-cluster-ip:3000/api/health');
   }
 
 }

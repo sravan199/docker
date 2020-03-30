@@ -1,6 +1,7 @@
 version: '3'
 services: 
     client-app:
+        image: sravanreddyguduru7/angular-client:v1.1
         build: 
             dockerfile: Dockerfile.prod
             context: ./
