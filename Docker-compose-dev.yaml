@@ -1,6 +1,8 @@
 version: '3'
 services: 
     client-app-dev:
+        image: sravanreddyguduru7/angular-client:v1.11
+        container_name: client-container
         build: 
             dockerfile: Dockerfile.dev
             context: ./
